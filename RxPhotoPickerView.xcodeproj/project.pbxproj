@@ -1,0 +1,817 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FFD6B522054CCF5005D1780 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B512054CCF5005D1780 /* AppDelegate.swift */; };
+		1FFD6B572054CCF5005D1780 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFD6B552054CCF5005D1780 /* Main.storyboard */; };
+		1FFD6B592054CCF5005D1780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFD6B582054CCF5005D1780 /* Assets.xcassets */; };
+		1FFD6B5C2054CCF5005D1780 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFD6B5A2054CCF5005D1780 /* LaunchScreen.storyboard */; };
+		1FFD6B672054CCF5005D1780 /* RxPhotoPickerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B662054CCF5005D1780 /* RxPhotoPickerViewTests.swift */; };
+		1FFD6B722054CCF5005D1780 /* RxPhotoPickerViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B712054CCF5005D1780 /* RxPhotoPickerViewUITests.swift */; };
+		1FFD6B852054CD2D005D1780 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B802054CD2C005D1780 /* ViewController.swift */; };
+		1FFD6B862054CD2D005D1780 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B802054CD2C005D1780 /* ViewController.swift */; };
+		1FFD6B872054CD2D005D1780 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B802054CD2C005D1780 /* ViewController.swift */; };
+		1FFD6B882054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B812054CD2C005D1780 /* RxPhotoPickerView.swift */; };
+		1FFD6B892054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B812054CD2C005D1780 /* RxPhotoPickerView.swift */; };
+		1FFD6B8A2054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B812054CD2C005D1780 /* RxPhotoPickerView.swift */; };
+		1FFD6B8E2054D756005D1780 /* RxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B8B2054D755005D1780 /* RxCollectionViewCell.swift */; };
+		1FFD6B8F2054D756005D1780 /* RxCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B8C2054D755005D1780 /* RxCollectionView.swift */; };
+		1FFD6B902054D756005D1780 /* RxCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B8D2054D756005D1780 /* RxCollectionViewLayout.swift */; };
+		1FFD6B922054D76E005D1780 /* SampleLayout1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B912054D76E005D1780 /* SampleLayout1.swift */; };
+		C2C858FE3E86651B2F90D1B7 /* Pods_RxPhotoPickerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5A6BCB8DA5614B6D9F8969 /* Pods_RxPhotoPickerView.framework */; };
+		CA0083868DDE70D4CD60878C /* Pods_RxPhotoPickerViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC94FEB6597FB3F5D2AD666B /* Pods_RxPhotoPickerViewUITests.framework */; };
+		D0AB7CCECDC0E92BF84D3E38 /* Pods_RxPhotoPickerViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CD7A9AE4C2EE26663DFC02 /* Pods_RxPhotoPickerViewTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1FFD6B632054CCF5005D1780 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FFD6B462054CCF5005D1780 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FFD6B4D2054CCF5005D1780;
+			remoteInfo = RxPhotoPickerView;
+		};
+		1FFD6B6E2054CCF5005D1780 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FFD6B462054CCF5005D1780 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FFD6B4D2054CCF5005D1780;
+			remoteInfo = RxPhotoPickerView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15E5E07BA5CF17A354A80547 /* Pods-RxPhotoPickerViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPhotoPickerViewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxPhotoPickerViewUITests/Pods-RxPhotoPickerViewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1FFD6B4E2054CCF5005D1780 /* RxPhotoPickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxPhotoPickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FFD6B512054CCF5005D1780 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1FFD6B562054CCF5005D1780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1FFD6B582054CCF5005D1780 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FFD6B5B2054CCF5005D1780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1FFD6B5D2054CCF5005D1780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FFD6B622054CCF5005D1780 /* RxPhotoPickerViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxPhotoPickerViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FFD6B662054CCF5005D1780 /* RxPhotoPickerViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxPhotoPickerViewTests.swift; sourceTree = "<group>"; };
+		1FFD6B682054CCF5005D1780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FFD6B6D2054CCF5005D1780 /* RxPhotoPickerViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxPhotoPickerViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FFD6B712054CCF5005D1780 /* RxPhotoPickerViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxPhotoPickerViewUITests.swift; sourceTree = "<group>"; };
+		1FFD6B732054CCF5005D1780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FFD6B802054CD2C005D1780 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1FFD6B812054CD2C005D1780 /* RxPhotoPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxPhotoPickerView.swift; sourceTree = "<group>"; };
+		1FFD6B8B2054D755005D1780 /* RxCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionViewCell.swift; sourceTree = "<group>"; };
+		1FFD6B8C2054D755005D1780 /* RxCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionView.swift; sourceTree = "<group>"; };
+		1FFD6B8D2054D756005D1780 /* RxCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionViewLayout.swift; sourceTree = "<group>"; };
+		1FFD6B912054D76E005D1780 /* SampleLayout1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleLayout1.swift; sourceTree = "<group>"; };
+		48640F2058E44E79EF5CBA17 /* Pods-RxPhotoPickerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPhotoPickerView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxPhotoPickerView/Pods-RxPhotoPickerView.debug.xcconfig"; sourceTree = "<group>"; };
+		5B5A6BCB8DA5614B6D9F8969 /* Pods_RxPhotoPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxPhotoPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67CD7A9AE4C2EE26663DFC02 /* Pods_RxPhotoPickerViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxPhotoPickerViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7391872A71E328E48DDE2E63 /* Pods-RxPhotoPickerViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPhotoPickerViewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxPhotoPickerViewUITests/Pods-RxPhotoPickerViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B87C1961FFFC792588DA5290 /* Pods-RxPhotoPickerViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPhotoPickerViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxPhotoPickerViewTests/Pods-RxPhotoPickerViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC94FEB6597FB3F5D2AD666B /* Pods_RxPhotoPickerViewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxPhotoPickerViewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3D57B54031B9836966B0257 /* Pods-RxPhotoPickerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPhotoPickerView.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxPhotoPickerView/Pods-RxPhotoPickerView.release.xcconfig"; sourceTree = "<group>"; };
+		CD0E511635146FC62CF378FB /* Pods-RxPhotoPickerViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPhotoPickerViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxPhotoPickerViewTests/Pods-RxPhotoPickerViewTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FFD6B4B2054CCF5005D1780 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2C858FE3E86651B2F90D1B7 /* Pods_RxPhotoPickerView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FFD6B5F2054CCF5005D1780 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0AB7CCECDC0E92BF84D3E38 /* Pods_RxPhotoPickerViewTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FFD6B6A2054CCF5005D1780 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0083868DDE70D4CD60878C /* Pods_RxPhotoPickerViewUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FFD6B452054CCF5005D1780 = {
+			isa = PBXGroup;
+			children = (
+				1FFD6B502054CCF5005D1780 /* RxPhotoPickerView */,
+				1FFD6B652054CCF5005D1780 /* RxPhotoPickerViewTests */,
+				1FFD6B702054CCF5005D1780 /* RxPhotoPickerViewUITests */,
+				1FFD6B4F2054CCF5005D1780 /* Products */,
+				D6C7E67EACA118BF490D6E26 /* Pods */,
+				24529128D0F440E373DAEE0D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1FFD6B4F2054CCF5005D1780 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FFD6B4E2054CCF5005D1780 /* RxPhotoPickerView.app */,
+				1FFD6B622054CCF5005D1780 /* RxPhotoPickerViewTests.xctest */,
+				1FFD6B6D2054CCF5005D1780 /* RxPhotoPickerViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FFD6B502054CCF5005D1780 /* RxPhotoPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				1FFD6B512054CCF5005D1780 /* AppDelegate.swift */,
+				1FFD6B802054CD2C005D1780 /* ViewController.swift */,
+				1FFD6B812054CD2C005D1780 /* RxPhotoPickerView.swift */,
+				1FFD6B932054D79C005D1780 /* RxCollectionView */,
+				1FFD6B552054CCF5005D1780 /* Main.storyboard */,
+				1FFD6B582054CCF5005D1780 /* Assets.xcassets */,
+				1FFD6B5A2054CCF5005D1780 /* LaunchScreen.storyboard */,
+				1FFD6B5D2054CCF5005D1780 /* Info.plist */,
+			);
+			path = RxPhotoPickerView;
+			sourceTree = "<group>";
+		};
+		1FFD6B652054CCF5005D1780 /* RxPhotoPickerViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				1FFD6B662054CCF5005D1780 /* RxPhotoPickerViewTests.swift */,
+				1FFD6B682054CCF5005D1780 /* Info.plist */,
+			);
+			path = RxPhotoPickerViewTests;
+			sourceTree = "<group>";
+		};
+		1FFD6B702054CCF5005D1780 /* RxPhotoPickerViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1FFD6B712054CCF5005D1780 /* RxPhotoPickerViewUITests.swift */,
+				1FFD6B732054CCF5005D1780 /* Info.plist */,
+			);
+			path = RxPhotoPickerViewUITests;
+			sourceTree = "<group>";
+		};
+		1FFD6B932054D79C005D1780 /* RxCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				1FFD6B942054D7B4005D1780 /* Layout */,
+				1FFD6B8C2054D755005D1780 /* RxCollectionView.swift */,
+				1FFD6B8B2054D755005D1780 /* RxCollectionViewCell.swift */,
+				1FFD6B8D2054D756005D1780 /* RxCollectionViewLayout.swift */,
+			);
+			path = RxCollectionView;
+			sourceTree = "<group>";
+		};
+		1FFD6B942054D7B4005D1780 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				1FFD6B912054D76E005D1780 /* SampleLayout1.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		24529128D0F440E373DAEE0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A6BCB8DA5614B6D9F8969 /* Pods_RxPhotoPickerView.framework */,
+				67CD7A9AE4C2EE26663DFC02 /* Pods_RxPhotoPickerViewTests.framework */,
+				BC94FEB6597FB3F5D2AD666B /* Pods_RxPhotoPickerViewUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6C7E67EACA118BF490D6E26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48640F2058E44E79EF5CBA17 /* Pods-RxPhotoPickerView.debug.xcconfig */,
+				C3D57B54031B9836966B0257 /* Pods-RxPhotoPickerView.release.xcconfig */,
+				B87C1961FFFC792588DA5290 /* Pods-RxPhotoPickerViewTests.debug.xcconfig */,
+				CD0E511635146FC62CF378FB /* Pods-RxPhotoPickerViewTests.release.xcconfig */,
+				7391872A71E328E48DDE2E63 /* Pods-RxPhotoPickerViewUITests.debug.xcconfig */,
+				15E5E07BA5CF17A354A80547 /* Pods-RxPhotoPickerViewUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FFD6B4D2054CCF5005D1780 /* RxPhotoPickerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FFD6B762054CCF5005D1780 /* Build configuration list for PBXNativeTarget "RxPhotoPickerView" */;
+			buildPhases = (
+				41B5CE2E076D87FF84A254C7 /* [CP] Check Pods Manifest.lock */,
+				1FFD6B4A2054CCF5005D1780 /* Sources */,
+				1FFD6B4B2054CCF5005D1780 /* Frameworks */,
+				1FFD6B4C2054CCF5005D1780 /* Resources */,
+				B0176E84EB7FAEB28EE9F34A /* [CP] Embed Pods Frameworks */,
+				4A2963AB752BC07D7520F5E5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RxPhotoPickerView;
+			productName = RxPhotoPickerView;
+			productReference = 1FFD6B4E2054CCF5005D1780 /* RxPhotoPickerView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1FFD6B612054CCF5005D1780 /* RxPhotoPickerViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FFD6B792054CCF5005D1780 /* Build configuration list for PBXNativeTarget "RxPhotoPickerViewTests" */;
+			buildPhases = (
+				34E1914BD38FF4CC6ABA1DA7 /* [CP] Check Pods Manifest.lock */,
+				1FFD6B5E2054CCF5005D1780 /* Sources */,
+				1FFD6B5F2054CCF5005D1780 /* Frameworks */,
+				1FFD6B602054CCF5005D1780 /* Resources */,
+				FA29C079A3F09192B54522FE /* [CP] Embed Pods Frameworks */,
+				C0C26D36E989A76A635800E6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FFD6B642054CCF5005D1780 /* PBXTargetDependency */,
+			);
+			name = RxPhotoPickerViewTests;
+			productName = RxPhotoPickerViewTests;
+			productReference = 1FFD6B622054CCF5005D1780 /* RxPhotoPickerViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1FFD6B6C2054CCF5005D1780 /* RxPhotoPickerViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FFD6B7C2054CCF5005D1780 /* Build configuration list for PBXNativeTarget "RxPhotoPickerViewUITests" */;
+			buildPhases = (
+				2B9E59C46D142359351928D4 /* [CP] Check Pods Manifest.lock */,
+				1FFD6B692054CCF5005D1780 /* Sources */,
+				1FFD6B6A2054CCF5005D1780 /* Frameworks */,
+				1FFD6B6B2054CCF5005D1780 /* Resources */,
+				8CDCCD88BB48DEFEDF2C55E3 /* [CP] Embed Pods Frameworks */,
+				1D043E8BC23A9212A1549DF1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FFD6B6F2054CCF5005D1780 /* PBXTargetDependency */,
+			);
+			name = RxPhotoPickerViewUITests;
+			productName = RxPhotoPickerViewUITests;
+			productReference = 1FFD6B6D2054CCF5005D1780 /* RxPhotoPickerViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FFD6B462054CCF5005D1780 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = sid;
+				TargetAttributes = {
+					1FFD6B4D2054CCF5005D1780 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					1FFD6B612054CCF5005D1780 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1FFD6B4D2054CCF5005D1780;
+					};
+					1FFD6B6C2054CCF5005D1780 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1FFD6B4D2054CCF5005D1780;
+					};
+				};
+			};
+			buildConfigurationList = 1FFD6B492054CCF5005D1780 /* Build configuration list for PBXProject "RxPhotoPickerView" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FFD6B452054CCF5005D1780;
+			productRefGroup = 1FFD6B4F2054CCF5005D1780 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FFD6B4D2054CCF5005D1780 /* RxPhotoPickerView */,
+				1FFD6B612054CCF5005D1780 /* RxPhotoPickerViewTests */,
+				1FFD6B6C2054CCF5005D1780 /* RxPhotoPickerViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FFD6B4C2054CCF5005D1780 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FFD6B5C2054CCF5005D1780 /* LaunchScreen.storyboard in Resources */,
+				1FFD6B592054CCF5005D1780 /* Assets.xcassets in Resources */,
+				1FFD6B572054CCF5005D1780 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FFD6B602054CCF5005D1780 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FFD6B6B2054CCF5005D1780 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D043E8BC23A9212A1549DF1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxPhotoPickerViewUITests/Pods-RxPhotoPickerViewUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B9E59C46D142359351928D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxPhotoPickerViewUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34E1914BD38FF4CC6ABA1DA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxPhotoPickerViewTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41B5CE2E076D87FF84A254C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxPhotoPickerView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A2963AB752BC07D7520F5E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxPhotoPickerView/Pods-RxPhotoPickerView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CDCCD88BB48DEFEDF2C55E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxPhotoPickerViewUITests/Pods-RxPhotoPickerViewUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0176E84EB7FAEB28EE9F34A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RxPhotoPickerView/Pods-RxPhotoPickerView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxPhotoPickerView/Pods-RxPhotoPickerView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0C26D36E989A76A635800E6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxPhotoPickerViewTests/Pods-RxPhotoPickerViewTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA29C079A3F09192B54522FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RxPhotoPickerViewTests/Pods-RxPhotoPickerViewTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxPhotoPickerViewTests/Pods-RxPhotoPickerViewTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FFD6B4A2054CCF5005D1780 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FFD6B852054CD2D005D1780 /* ViewController.swift in Sources */,
+				1FFD6B8F2054D756005D1780 /* RxCollectionView.swift in Sources */,
+				1FFD6B882054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */,
+				1FFD6B8E2054D756005D1780 /* RxCollectionViewCell.swift in Sources */,
+				1FFD6B902054D756005D1780 /* RxCollectionViewLayout.swift in Sources */,
+				1FFD6B522054CCF5005D1780 /* AppDelegate.swift in Sources */,
+				1FFD6B922054D76E005D1780 /* SampleLayout1.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FFD6B5E2054CCF5005D1780 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FFD6B862054CD2D005D1780 /* ViewController.swift in Sources */,
+				1FFD6B892054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */,
+				1FFD6B672054CCF5005D1780 /* RxPhotoPickerViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FFD6B692054CCF5005D1780 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FFD6B872054CD2D005D1780 /* ViewController.swift in Sources */,
+				1FFD6B8A2054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */,
+				1FFD6B722054CCF5005D1780 /* RxPhotoPickerViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FFD6B642054CCF5005D1780 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FFD6B4D2054CCF5005D1780 /* RxPhotoPickerView */;
+			targetProxy = 1FFD6B632054CCF5005D1780 /* PBXContainerItemProxy */;
+		};
+		1FFD6B6F2054CCF5005D1780 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FFD6B4D2054CCF5005D1780 /* RxPhotoPickerView */;
+			targetProxy = 1FFD6B6E2054CCF5005D1780 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1FFD6B552054CCF5005D1780 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FFD6B562054CCF5005D1780 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1FFD6B5A2054CCF5005D1780 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FFD6B5B2054CCF5005D1780 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FFD6B742054CCF5005D1780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1FFD6B752054CCF5005D1780 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1FFD6B772054CCF5005D1780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48640F2058E44E79EF5CBA17 /* Pods-RxPhotoPickerView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DA286QUY92;
+				INFOPLIST_FILE = RxPhotoPickerView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sid.RxPhotoPickerView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1FFD6B782054CCF5005D1780 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3D57B54031B9836966B0257 /* Pods-RxPhotoPickerView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DA286QUY92;
+				INFOPLIST_FILE = RxPhotoPickerView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sid.RxPhotoPickerView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1FFD6B7A2054CCF5005D1780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B87C1961FFFC792588DA5290 /* Pods-RxPhotoPickerViewTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DA286QUY92;
+				INFOPLIST_FILE = RxPhotoPickerViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sid.RxPhotoPickerViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxPhotoPickerView.app/RxPhotoPickerView";
+			};
+			name = Debug;
+		};
+		1FFD6B7B2054CCF5005D1780 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD0E511635146FC62CF378FB /* Pods-RxPhotoPickerViewTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DA286QUY92;
+				INFOPLIST_FILE = RxPhotoPickerViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sid.RxPhotoPickerViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxPhotoPickerView.app/RxPhotoPickerView";
+			};
+			name = Release;
+		};
+		1FFD6B7D2054CCF5005D1780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7391872A71E328E48DDE2E63 /* Pods-RxPhotoPickerViewUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DA286QUY92;
+				INFOPLIST_FILE = RxPhotoPickerViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sid.RxPhotoPickerViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RxPhotoPickerView;
+			};
+			name = Debug;
+		};
+		1FFD6B7E2054CCF5005D1780 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15E5E07BA5CF17A354A80547 /* Pods-RxPhotoPickerViewUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DA286QUY92;
+				INFOPLIST_FILE = RxPhotoPickerViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sid.RxPhotoPickerViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RxPhotoPickerView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FFD6B492054CCF5005D1780 /* Build configuration list for PBXProject "RxPhotoPickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FFD6B742054CCF5005D1780 /* Debug */,
+				1FFD6B752054CCF5005D1780 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FFD6B762054CCF5005D1780 /* Build configuration list for PBXNativeTarget "RxPhotoPickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FFD6B772054CCF5005D1780 /* Debug */,
+				1FFD6B782054CCF5005D1780 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FFD6B792054CCF5005D1780 /* Build configuration list for PBXNativeTarget "RxPhotoPickerViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FFD6B7A2054CCF5005D1780 /* Debug */,
+				1FFD6B7B2054CCF5005D1780 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FFD6B7C2054CCF5005D1780 /* Build configuration list for PBXNativeTarget "RxPhotoPickerViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FFD6B7D2054CCF5005D1780 /* Debug */,
+				1FFD6B7E2054CCF5005D1780 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FFD6B462054CCF5005D1780 /* Project object */;
+}

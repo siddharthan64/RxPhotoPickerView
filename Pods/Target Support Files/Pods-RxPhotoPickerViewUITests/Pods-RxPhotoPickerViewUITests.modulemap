@@ -1,0 +1,6 @@
+framework module Pods_RxPhotoPickerViewUITests {
+  umbrella header "Pods-RxPhotoPickerViewUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
