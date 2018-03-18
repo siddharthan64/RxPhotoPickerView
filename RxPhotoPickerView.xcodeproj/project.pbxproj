@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1E1660205DE9AC00232C6C /* RxCollectionViewVLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E165F205DE9AC00232C6C /* RxCollectionViewVLayout.swift */; };
+		1F1E1662205E1D4900232C6C /* RxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E1661205E1D4900232C6C /* RxCollectionViewCell.swift */; };
+		1F1E1664205E28DE00232C6C /* RxCollectionViewHLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E1663205E28DE00232C6C /* RxCollectionViewHLayout.swift */; };
+		1F1E1666205E2D8700232C6C /* LayoutConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E1665205E2D8700232C6C /* LayoutConfiguration.swift */; };
+		1F1E1667205E316F00232C6C /* LayoutConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E1665205E2D8700232C6C /* LayoutConfiguration.swift */; };
+		1F1E1668205E317000232C6C /* LayoutConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E1665205E2D8700232C6C /* LayoutConfiguration.swift */; };
 		1FFD6B522054CCF5005D1780 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B512054CCF5005D1780 /* AppDelegate.swift */; };
 		1FFD6B572054CCF5005D1780 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFD6B552054CCF5005D1780 /* Main.storyboard */; };
 		1FFD6B592054CCF5005D1780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFD6B582054CCF5005D1780 /* Assets.xcassets */; };
@@ -19,10 +25,7 @@
 		1FFD6B882054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B812054CD2C005D1780 /* RxPhotoPickerView.swift */; };
 		1FFD6B892054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B812054CD2C005D1780 /* RxPhotoPickerView.swift */; };
 		1FFD6B8A2054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B812054CD2C005D1780 /* RxPhotoPickerView.swift */; };
-		1FFD6B8E2054D756005D1780 /* RxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B8B2054D755005D1780 /* RxCollectionViewCell.swift */; };
 		1FFD6B8F2054D756005D1780 /* RxCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B8C2054D755005D1780 /* RxCollectionView.swift */; };
-		1FFD6B902054D756005D1780 /* RxCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B8D2054D756005D1780 /* RxCollectionViewLayout.swift */; };
-		1FFD6B922054D76E005D1780 /* SampleLayout1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B912054D76E005D1780 /* SampleLayout1.swift */; };
 		C2C858FE3E86651B2F90D1B7 /* Pods_RxPhotoPickerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5A6BCB8DA5614B6D9F8969 /* Pods_RxPhotoPickerView.framework */; };
 		CA0083868DDE70D4CD60878C /* Pods_RxPhotoPickerViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC94FEB6597FB3F5D2AD666B /* Pods_RxPhotoPickerViewUITests.framework */; };
 		D0AB7CCECDC0E92BF84D3E38 /* Pods_RxPhotoPickerViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CD7A9AE4C2EE26663DFC02 /* Pods_RxPhotoPickerViewTests.framework */; };
@@ -47,6 +50,10 @@
 
 /* Begin PBXFileReference section */
 		15E5E07BA5CF17A354A80547 /* Pods-RxPhotoPickerViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPhotoPickerViewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxPhotoPickerViewUITests/Pods-RxPhotoPickerViewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1F1E165F205DE9AC00232C6C /* RxCollectionViewVLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCollectionViewVLayout.swift; sourceTree = "<group>"; };
+		1F1E1661205E1D4900232C6C /* RxCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionViewCell.swift; sourceTree = "<group>"; };
+		1F1E1663205E28DE00232C6C /* RxCollectionViewHLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCollectionViewHLayout.swift; sourceTree = "<group>"; };
+		1F1E1665205E2D8700232C6C /* LayoutConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConfiguration.swift; sourceTree = "<group>"; };
 		1FFD6B4E2054CCF5005D1780 /* RxPhotoPickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxPhotoPickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFD6B512054CCF5005D1780 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FFD6B562054CCF5005D1780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,10 +68,7 @@
 		1FFD6B732054CCF5005D1780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FFD6B802054CD2C005D1780 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1FFD6B812054CD2C005D1780 /* RxPhotoPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxPhotoPickerView.swift; sourceTree = "<group>"; };
-		1FFD6B8B2054D755005D1780 /* RxCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionViewCell.swift; sourceTree = "<group>"; };
 		1FFD6B8C2054D755005D1780 /* RxCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionView.swift; sourceTree = "<group>"; };
-		1FFD6B8D2054D756005D1780 /* RxCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionViewLayout.swift; sourceTree = "<group>"; };
-		1FFD6B912054D76E005D1780 /* SampleLayout1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleLayout1.swift; sourceTree = "<group>"; };
 		48640F2058E44E79EF5CBA17 /* Pods-RxPhotoPickerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPhotoPickerView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxPhotoPickerView/Pods-RxPhotoPickerView.debug.xcconfig"; sourceTree = "<group>"; };
 		5B5A6BCB8DA5614B6D9F8969 /* Pods_RxPhotoPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxPhotoPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CD7A9AE4C2EE26663DFC02 /* Pods_RxPhotoPickerViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxPhotoPickerViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +135,7 @@
 				1FFD6B512054CCF5005D1780 /* AppDelegate.swift */,
 				1FFD6B802054CD2C005D1780 /* ViewController.swift */,
 				1FFD6B812054CD2C005D1780 /* RxPhotoPickerView.swift */,
+				1F1E1665205E2D8700232C6C /* LayoutConfiguration.swift */,
 				1FFD6B932054D79C005D1780 /* RxCollectionView */,
 				1FFD6B552054CCF5005D1780 /* Main.storyboard */,
 				1FFD6B582054CCF5005D1780 /* Assets.xcassets */,
@@ -161,20 +166,12 @@
 		1FFD6B932054D79C005D1780 /* RxCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				1FFD6B942054D7B4005D1780 /* Layout */,
 				1FFD6B8C2054D755005D1780 /* RxCollectionView.swift */,
-				1FFD6B8B2054D755005D1780 /* RxCollectionViewCell.swift */,
-				1FFD6B8D2054D756005D1780 /* RxCollectionViewLayout.swift */,
+				1F1E1661205E1D4900232C6C /* RxCollectionViewCell.swift */,
+				1F1E165F205DE9AC00232C6C /* RxCollectionViewVLayout.swift */,
+				1F1E1663205E28DE00232C6C /* RxCollectionViewHLayout.swift */,
 			);
 			path = RxCollectionView;
-			sourceTree = "<group>";
-		};
-		1FFD6B942054D7B4005D1780 /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				1FFD6B912054D76E005D1780 /* SampleLayout1.swift */,
-			);
-			path = Layout;
 			sourceTree = "<group>";
 		};
 		24529128D0F440E373DAEE0D /* Frameworks */ = {
@@ -502,13 +499,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1E1662205E1D4900232C6C /* RxCollectionViewCell.swift in Sources */,
+				1F1E1660205DE9AC00232C6C /* RxCollectionViewVLayout.swift in Sources */,
+				1F1E1666205E2D8700232C6C /* LayoutConfiguration.swift in Sources */,
 				1FFD6B852054CD2D005D1780 /* ViewController.swift in Sources */,
 				1FFD6B8F2054D756005D1780 /* RxCollectionView.swift in Sources */,
 				1FFD6B882054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */,
-				1FFD6B8E2054D756005D1780 /* RxCollectionViewCell.swift in Sources */,
-				1FFD6B902054D756005D1780 /* RxCollectionViewLayout.swift in Sources */,
+				1F1E1664205E28DE00232C6C /* RxCollectionViewHLayout.swift in Sources */,
 				1FFD6B522054CCF5005D1780 /* AppDelegate.swift in Sources */,
-				1FFD6B922054D76E005D1780 /* SampleLayout1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +516,7 @@
 			files = (
 				1FFD6B862054CD2D005D1780 /* ViewController.swift in Sources */,
 				1FFD6B892054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */,
+				1F1E1667205E316F00232C6C /* LayoutConfiguration.swift in Sources */,
 				1FFD6B672054CCF5005D1780 /* RxPhotoPickerViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,6 +527,7 @@
 			files = (
 				1FFD6B872054CD2D005D1780 /* ViewController.swift in Sources */,
 				1FFD6B8A2054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */,
+				1F1E1668205E317000232C6C /* LayoutConfiguration.swift in Sources */,
 				1FFD6B722054CCF5005D1780 /* RxPhotoPickerViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

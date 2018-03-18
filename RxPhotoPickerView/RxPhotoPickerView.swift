@@ -9,26 +9,61 @@
 import RxSwift
 import UIKit
 
-class RxPhotoPickerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
-    var imageCount: Int?
-    let defaultCount = 6
+@IBDesignable class RxPhotoPickerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    convenience public init(count:Int, frame: CGRect){
-        self.init(frame: frame)
-        imageCount = count
+    private var layoutConfiguration: CustomLayoutConfiguration = DefaultConfiguration()
+
+    @IBInspectable var isHorizontal: Bool {
+        get {
+            return layoutConfiguration.isHorizontal
+        }
+
+        set {
+            layoutConfiguration.isHorizontal = newValue
+        }
     }
-    
+
+    @IBInspectable var numberOfSegments: Int {
+        get {
+            return layoutConfiguration.numberOfSegments
+        }
+
+        set {
+            layoutConfiguration.numberOfSegments = newValue
+        }
+    }
+
+    @IBInspectable var numberOfImages: Int {
+        get {
+            return layoutConfiguration.numberOfImages
+        }
+
+        set {
+            layoutConfiguration.numberOfImages = newValue
+        }
+    }
+
+    public convenience init(layoutConfiguration: CustomLayoutConfiguration = DefaultConfiguration()) {
+        self.init(frame: .zero)
+        self.layoutConfiguration = layoutConfiguration
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(rxCollectionView)
         setUp()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
         addSubview(rxCollectionView)
         setUp()
     }
+
     func setUp() {
         NSLayoutConstraint.activate([
             rxCollectionView.topAnchor.constraint(equalTo: topAnchor),
@@ -45,7 +80,15 @@ class RxPhotoPickerView: UIView, UICollectionViewDataSource, UICollectionViewDel
     }
 
     lazy var rxCollectionView: RxCollectionView = {
-        let cV = RxCollectionView(frame: CGRect.zero, collectionViewLayout: SampleLayout1())
+        var layout: UICollectionViewLayout = UICollectionViewLayout()
+
+        if layoutConfiguration.isHorizontal {
+            layout = RxCollectionViewHLayout(numberOfRows: layoutConfiguration.numberOfSegments)
+        } else {
+            layout = RxCollectionViewVLayout(numberofColumns: layoutConfiguration.numberOfSegments)
+        }
+
+        let cV = RxCollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         cV.backgroundColor = UIColor.white
         cV.showsVerticalScrollIndicator = false
         cV.showsHorizontalScrollIndicator = false
@@ -57,7 +100,7 @@ class RxPhotoPickerView: UIView, UICollectionViewDataSource, UICollectionViewDel
     }()
 
     func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
-        return imageCount ?? defaultCount
+        return numberOfImages
     }
 
     func numberOfSections(in _: UICollectionView) -> Int {
@@ -69,6 +112,7 @@ class RxPhotoPickerView: UIView, UICollectionViewDataSource, UICollectionViewDel
             return UICollectionViewCell()
         }
         cell.configure(UIImage(named: "corgi"))
+        cell.updateText(index: indexPath.row)
         return cell
     }
 

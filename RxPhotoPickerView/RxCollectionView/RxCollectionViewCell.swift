@@ -10,6 +10,7 @@ import UIKit
 
 class RxCollectionViewCell: UICollectionViewCell {
     var imageView: UIImageView?
+    var indexLabel: UILabel?
 
     static let cellIdentifier = "Cell"
 
@@ -18,12 +19,16 @@ class RxCollectionViewCell: UICollectionViewCell {
         imageView = UIImageView()
         imageView?.contentMode = .scaleAspectFit
         imageView?.isUserInteractionEnabled = false
-        guard let imageView = imageView else {
+
+        indexLabel = UILabel()
+
+        guard let imageView = imageView, let indexLabel = indexLabel else {
             assertionFailure("Invalid Image View. Imagepicker needs a image view inside its cell")
             return
         }
 
         contentView.addSubview(imageView)
+        contentView.addSubview(indexLabel)
     }
 
     override func layoutSubviews() {
@@ -37,10 +42,23 @@ class RxCollectionViewCell: UICollectionViewCell {
             frame.origin.y = 0
             imageView.frame = frame
         }
+
+        if let indexLabel = indexLabel {
+            var frame = indexLabel.frame
+            frame.size.height = self.frame.size.height
+            frame.size.width = self.frame.size.width
+            frame.origin.x = 0
+            frame.origin.y = 0
+            indexLabel.frame = frame
+        }
     }
 
     func configure(_ model: UIImage?) {
         imageView?.image = model
+    }
+
+    func updateText(index: Int) {
+        indexLabel?.text = "\(index)"
     }
 
     required init?(coder _: NSCoder) {
