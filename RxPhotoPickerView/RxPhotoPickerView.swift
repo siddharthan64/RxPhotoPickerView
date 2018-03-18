@@ -111,7 +111,7 @@ import UIKit
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RxCollectionViewCell.cellIdentifier, for: indexPath) as? RxCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.configure(UIImage(named: "corgi"))
+        
         cell.updateText(index: indexPath.row)
         return cell
     }

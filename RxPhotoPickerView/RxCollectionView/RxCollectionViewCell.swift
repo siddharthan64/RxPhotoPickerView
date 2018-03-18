@@ -26,9 +26,10 @@ class RxCollectionViewCell: UICollectionViewCell {
             assertionFailure("Invalid Image View. Imagepicker needs a image view inside its cell")
             return
         }
-
+        contentView.backgroundColor = .lightGray
         contentView.addSubview(imageView)
         contentView.addSubview(indexLabel)
+        setup()
     }
 
     override func layoutSubviews() {
@@ -42,14 +43,20 @@ class RxCollectionViewCell: UICollectionViewCell {
             frame.origin.y = 0
             imageView.frame = frame
         }
-
+    }
+    
+    func setup(){
         if let indexLabel = indexLabel {
-            var frame = indexLabel.frame
-            frame.size.height = self.frame.size.height
-            frame.size.width = self.frame.size.width
-            frame.origin.x = 0
-            frame.origin.y = 0
-            indexLabel.frame = frame
+            indexLabel.translatesAutoresizingMaskIntoConstraints = false
+            indexLabel.font = UIFont.systemFont(ofSize: 35, weight: .medium)
+            indexLabel.textAlignment = .center
+            indexLabel.textColor = .white
+            
+            NSLayoutConstraint.activate([
+                            indexLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+                            indexLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+                            indexLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor,multiplier: 0.75),
+                            indexLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor,multiplier: 0.75)])
         }
     }
 

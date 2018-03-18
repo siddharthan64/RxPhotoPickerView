@@ -81,7 +81,7 @@ class RxCollectionViewHLayout: UICollectionViewLayout {
 
                 contentWidth = max(contentWidth, attributes.frame.maxX)
 
-                let width = cellPadding * 2 + attributes.frame.size.width
+                let width = cellPadding + attributes.frame.size.width
 
                 xOffset[rowIndex] = xOffset[rowIndex] + width
             }
@@ -109,7 +109,7 @@ class RxCollectionViewHLayout: UICollectionViewLayout {
     private func frameForMainCell() -> CGRect {
         let photoHeight = contentHeight * (2 / 3)
         let photoWidth = (collectionView?.bounds.width ?? 0) * (2 / 3)
-        let frame = CGRect(x: cellPadding, y: cellPadding, width: photoWidth, height: photoHeight)
+        let frame = CGRect(x: 0, y: 0, width: photoWidth, height: photoHeight)
         return frame.insetBy(dx: cellPadding, dy: cellPadding)
     }
 
@@ -117,8 +117,8 @@ class RxCollectionViewHLayout: UICollectionViewLayout {
         let rowHeight = (contentHeight / 3)
         let width = (collectionView?.bounds.width ?? 0) / 3
 
-        let x = item == 1 ? cellPadding : (width + cellPadding)
-        let y = (rowHeight * 2) + cellPadding
+        let x = item == 1 ? 0 : width
+        let y = (rowHeight * 2)
 
         let frame = CGRect(x: x, y: y, width: width, height: rowHeight)
 
