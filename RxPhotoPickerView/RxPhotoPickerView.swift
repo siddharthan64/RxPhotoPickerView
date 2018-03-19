@@ -119,6 +119,26 @@ import UIKit
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let _ = collectionView.dequeueReusableCell(withReuseIdentifier: RxCollectionViewCell.cellIdentifier, for: indexPath) as? RxCollectionViewCell {
             cellSelectionSubject.onNext(indexPath)
+            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            if let photoVC = sb.instantiateViewController(withIdentifier: "GridVC") as? AssetGridViewController {
+                photoVC.imageCount = numberOfImages
+                let navVC = UINavigationController(rootViewController: photoVC)
+                UIApplication.topViewController()?.present(navVC, animated: true)
+            }
+            
         }
+    }
+}
+
+extension UIApplication {
+    static func topViewController() -> UIViewController? {
+        guard var top = shared.keyWindow?.rootViewController else {
+            return nil
+        }
+        while let next = top.presentedViewController {
+            top = next
+        }
+        return top
     }
 }

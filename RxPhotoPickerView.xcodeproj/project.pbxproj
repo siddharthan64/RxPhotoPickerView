@@ -13,6 +13,9 @@
 		1F1E1666205E2D8700232C6C /* LayoutConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E1665205E2D8700232C6C /* LayoutConfiguration.swift */; };
 		1F1E1667205E316F00232C6C /* LayoutConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E1665205E2D8700232C6C /* LayoutConfiguration.swift */; };
 		1F1E1668205E317000232C6C /* LayoutConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E1665205E2D8700232C6C /* LayoutConfiguration.swift */; };
+		1FAEAC76205F337E00564246 /* AssetGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAEAC75205F337E00564246 /* AssetGridViewController.swift */; };
+		1FAEAC78205F343A00564246 /* GridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAEAC77205F343A00564246 /* GridViewCell.swift */; };
+		1FAEAC7A205F4AAD00564246 /* SelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAEAC79205F4AAD00564246 /* SelectionModel.swift */; };
 		1FFD6B522054CCF5005D1780 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B512054CCF5005D1780 /* AppDelegate.swift */; };
 		1FFD6B572054CCF5005D1780 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFD6B552054CCF5005D1780 /* Main.storyboard */; };
 		1FFD6B592054CCF5005D1780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFD6B582054CCF5005D1780 /* Assets.xcassets */; };
@@ -54,6 +57,9 @@
 		1F1E1661205E1D4900232C6C /* RxCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionViewCell.swift; sourceTree = "<group>"; };
 		1F1E1663205E28DE00232C6C /* RxCollectionViewHLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCollectionViewHLayout.swift; sourceTree = "<group>"; };
 		1F1E1665205E2D8700232C6C /* LayoutConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConfiguration.swift; sourceTree = "<group>"; };
+		1FAEAC75205F337E00564246 /* AssetGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetGridViewController.swift; sourceTree = "<group>"; };
+		1FAEAC77205F343A00564246 /* GridViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewCell.swift; sourceTree = "<group>"; };
+		1FAEAC79205F4AAD00564246 /* SelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionModel.swift; sourceTree = "<group>"; };
 		1FFD6B4E2054CCF5005D1780 /* RxPhotoPickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxPhotoPickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFD6B512054CCF5005D1780 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FFD6B562054CCF5005D1780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -170,6 +176,9 @@
 				1F1E1661205E1D4900232C6C /* RxCollectionViewCell.swift */,
 				1F1E165F205DE9AC00232C6C /* RxCollectionViewVLayout.swift */,
 				1F1E1663205E28DE00232C6C /* RxCollectionViewHLayout.swift */,
+				1FAEAC75205F337E00564246 /* AssetGridViewController.swift */,
+				1FAEAC77205F343A00564246 /* GridViewCell.swift */,
+				1FAEAC79205F4AAD00564246 /* SelectionModel.swift */,
 			);
 			path = RxCollectionView;
 			sourceTree = "<group>";
@@ -499,6 +508,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FAEAC76205F337E00564246 /* AssetGridViewController.swift in Sources */,
+				1FAEAC78205F343A00564246 /* GridViewCell.swift in Sources */,
+				1FAEAC7A205F4AAD00564246 /* SelectionModel.swift in Sources */,
 				1F1E1662205E1D4900232C6C /* RxCollectionViewCell.swift in Sources */,
 				1F1E1660205DE9AC00232C6C /* RxCollectionViewVLayout.swift in Sources */,
 				1F1E1666205E2D8700232C6C /* LayoutConfiguration.swift in Sources */,
