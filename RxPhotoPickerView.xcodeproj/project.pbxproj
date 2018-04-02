@@ -26,8 +26,6 @@
 		1FFD6B862054CD2D005D1780 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B802054CD2C005D1780 /* ViewController.swift */; };
 		1FFD6B872054CD2D005D1780 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B802054CD2C005D1780 /* ViewController.swift */; };
 		1FFD6B882054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B812054CD2C005D1780 /* RxPhotoPickerView.swift */; };
-		1FFD6B892054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B812054CD2C005D1780 /* RxPhotoPickerView.swift */; };
-		1FFD6B8A2054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B812054CD2C005D1780 /* RxPhotoPickerView.swift */; };
 		1FFD6B8F2054D756005D1780 /* RxCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD6B8C2054D755005D1780 /* RxCollectionView.swift */; };
 		C2C858FE3E86651B2F90D1B7 /* Pods_RxPhotoPickerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5A6BCB8DA5614B6D9F8969 /* Pods_RxPhotoPickerView.framework */; };
 		CA0083868DDE70D4CD60878C /* Pods_RxPhotoPickerViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC94FEB6597FB3F5D2AD666B /* Pods_RxPhotoPickerViewUITests.framework */; };
@@ -113,6 +111,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F3EC6DE2071B332004B67B5 /* Asset CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				1FAEAC75205F337E00564246 /* AssetGridViewController.swift */,
+				1FAEAC77205F343A00564246 /* GridViewCell.swift */,
+				1FAEAC79205F4AAD00564246 /* SelectionModel.swift */,
+			);
+			path = "Asset CollectionView";
+			sourceTree = "<group>";
+		};
 		1FFD6B452054CCF5005D1780 = {
 			isa = PBXGroup;
 			children = (
@@ -176,9 +184,7 @@
 				1F1E1661205E1D4900232C6C /* RxCollectionViewCell.swift */,
 				1F1E165F205DE9AC00232C6C /* RxCollectionViewVLayout.swift */,
 				1F1E1663205E28DE00232C6C /* RxCollectionViewHLayout.swift */,
-				1FAEAC75205F337E00564246 /* AssetGridViewController.swift */,
-				1FAEAC77205F343A00564246 /* GridViewCell.swift */,
-				1FAEAC79205F4AAD00564246 /* SelectionModel.swift */,
+				1F3EC6DE2071B332004B67B5 /* Asset CollectionView */,
 			);
 			path = RxCollectionView;
 			sourceTree = "<group>";
@@ -527,7 +533,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FFD6B862054CD2D005D1780 /* ViewController.swift in Sources */,
-				1FFD6B892054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */,
 				1F1E1667205E316F00232C6C /* LayoutConfiguration.swift in Sources */,
 				1FFD6B672054CCF5005D1780 /* RxPhotoPickerViewTests.swift in Sources */,
 			);
@@ -538,7 +543,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FFD6B872054CD2D005D1780 /* ViewController.swift in Sources */,
-				1FFD6B8A2054CD2D005D1780 /* RxPhotoPickerView.swift in Sources */,
 				1F1E1668205E317000232C6C /* LayoutConfiguration.swift in Sources */,
 				1FFD6B722054CCF5005D1780 /* RxPhotoPickerViewUITests.swift in Sources */,
 			);

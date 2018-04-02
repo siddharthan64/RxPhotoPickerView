@@ -9,34 +9,32 @@
 import UIKit
 
 class GridViewCell: UICollectionViewCell {
-    
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet weak var selectionView: UIView!
-    @IBOutlet weak var indexLabel: UILabel!
-    
+    @IBOutlet var selectionView: UIView!
+    @IBOutlet var indexLabel: UILabel!
+
     override func layoutSubviews() {
         super.layoutSubviews()
         setUp()
     }
-    
-    private func setUp(){
+
+    private func setUp() {
 //        selectionView.isHidden = true
         selectionView.layer.cornerRadius = 15
     }
-    
-    
+
     var thumbnailImage: UIImage! {
         didSet {
             imageView.image = thumbnailImage
         }
     }
-    
+
     override func prepareForReuse() {
         super.prepareForReuse()
         thumbnailImage = nil
         selectionView.isHidden = true
     }
-    
+
     func configureCell(_ model: SelectionModel) {
         thumbnailImage = model.image
         selectionView.isHidden = !model.isSelected
@@ -45,4 +43,3 @@ class GridViewCell: UICollectionViewCell {
         }
     }
 }
-
