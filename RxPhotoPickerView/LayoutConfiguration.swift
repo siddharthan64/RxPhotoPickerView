@@ -8,18 +8,27 @@
 
 import UIKit
 
-public protocol CustomLayoutConfiguration {
+protocol CustomLayoutConfiguration {
     var numberOfSegments: Int { get set }
     var isHorizontal: Bool { get set }
     var numberOfImages: Int { get set }
+    var imagesModels: [ImageIndexModel] { get set }
 }
 
-public struct DefaultConfiguration: CustomLayoutConfiguration {
-    public init() {}
+struct DefaultConfiguration: CustomLayoutConfiguration {
+    init() {}
 
-    public var numberOfSegments: Int = 3
+    var numberOfSegments: Int = 3
 
-    public var isHorizontal: Bool = false
+    var isHorizontal: Bool = false
 
-    public var numberOfImages: Int = 10
+    var numberOfImages: Int = 10
+
+    var imagesModels: [ImageIndexModel] = []
+}
+
+struct ImageIndexModel {
+    var index: Int = 0
+    var image: UIImage?
+    var assetIdentifier: String?
 }

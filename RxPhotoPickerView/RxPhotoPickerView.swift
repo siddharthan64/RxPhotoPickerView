@@ -10,7 +10,6 @@ import RxSwift
 import UIKit
 
 @IBDesignable class RxPhotoPickerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
-    
     private var layoutConfiguration: CustomLayoutConfiguration = DefaultConfiguration()
 
     @IBInspectable var isHorizontal: Bool {
@@ -73,12 +72,6 @@ import UIKit
         ])
     }
 
-    private let cellSelectionSubject: PublishSubject<IndexPath> = PublishSubject<IndexPath>()
-
-    public var cellSelectionObservable: Observable<IndexPath> {
-        return cellSelectionSubject.asObservable()
-    }
-
     lazy var rxCollectionView: RxCollectionView = {
         var layout: UICollectionViewLayout = UICollectionViewLayout()
 
@@ -111,14 +104,74 @@ import UIKit
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RxCollectionViewCell.cellIdentifier, for: indexPath) as? RxCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.configure(UIImage(named: "corgi"))
-        cell.updateText(index: indexPath.row)
+
+        if let imageIndexModel = self.layoutConfiguration.imagesModels.filter({ ($0.index - 1) == indexPath.row }).first {
+            cell.configure(image: imageIndexModel.image)
+        } else {
+            cell.updateText(index: indexPath.row + 1)
+        }
+
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let _ = collectionView.dequeueReusableCell(withReuseIdentifier: RxCollectionViewCell.cellIdentifier, for: indexPath) as? RxCollectionViewCell {
-            cellSelectionSubject.onNext(indexPath)
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            if let photoVC = sb.instantiateViewController(withIdentifier: "GridVC") as? AssetGridViewController {
+                subscribeTo(photoVC.modelObservable)
+
+                if hasImages {
+                    photoVC.reEntryModelIndexes = getSelectionModels()
+                }
+
+                photoVC.imageCount = numberOfImages
+                let navVC = UINavigationController(rootViewController: photoVC)
+                UIApplication.topViewController()?.present(navVC, animated: true)
+            }
         }
+    }
+
+    private var hasImages: Bool {
+        return layoutConfiguration.imagesModels.count > 0
+    }
+
+    private func getSelectionModels() -> [SelectionModel] {
+        return layoutConfiguration.imagesModels.map({ (model) -> SelectionModel in
+            SelectionModel(image: model.image, isSelected: true, imageIndex: model.index, representedAssetIdentifier: model.assetIdentifier)
+        })
+    }
+
+    private func subscribeTo(_ selectionModelObservable: Observable<[SelectionModel]>) {
+        selectionModelObservable.observeOn(MainScheduler.instance).subscribe(onNext: { [weak self] selectionModels in
+
+            guard let `self` = self else {
+                return
+            }
+
+            let imageModels = selectionModels.map({ (selectionModel) -> ImageIndexModel in
+                guard let imageIndex = selectionModel.imageIndex, let image = selectionModel.image else {
+                    return ImageIndexModel()
+                }
+
+                return ImageIndexModel(index: imageIndex, image: image, assetIdentifier: selectionModel.representedAssetIdentifier)
+            })
+
+            self.layoutConfiguration.imagesModels = imageModels
+            self.rxCollectionView.reloadData()
+        }).disposed(by: disposeBag)
+    }
+
+    private let disposeBag = DisposeBag()
+}
+
+extension UIApplication {
+    static func topViewController() -> UIViewController? {
+        guard var top = shared.keyWindow?.rootViewController else {
+            return nil
+        }
+        while let next = top.presentedViewController {
+            top = next
+        }
+        return top
     }
 }
