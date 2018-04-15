@@ -6,11 +6,15 @@
 //  Copyright © 2018 sid. All rights reserved.
 //
 
+import Photos
 import RxSwift
 import UIKit
 
-@IBDesignable class RxPhotoPickerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
+@IBDesignable class RxPhotoPickerView: UIView, UICollectionViewDataSource, UICollectionViewDelegate,
+    UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     private var layoutConfiguration: CustomLayoutConfiguration = DefaultConfiguration()
+
+    var imagePicker: UIImagePickerController?
 
     @IBInspectable var isHorizontal: Bool {
         get {
@@ -114,20 +118,12 @@ import UIKit
         return cell
     }
 
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let _ = collectionView.dequeueReusableCell(withReuseIdentifier: RxCollectionViewCell.cellIdentifier, for: indexPath) as? RxCollectionViewCell {
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            if let photoVC = sb.instantiateViewController(withIdentifier: "GridVC") as? AssetGridViewController {
-                subscribeTo(photoVC.modelObservable)
-
-                if hasImages {
-                    photoVC.reEntryModelIndexes = getSelectionModels()
-                }
-
-                photoVC.imageCount = numberOfImages
-                let navVC = UINavigationController(rootViewController: photoVC)
-                UIApplication.topViewController()?.present(navVC, animated: true)
-            }
+    func collectionView(_: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let count = layoutConfiguration.imagesModels.count
+        if count == 0 || indexPath.item > (count - 1) {
+            showAlertControllerWithNoImage()
+        } else {
+            showAlertControllerWithImage(indexPath)
         }
     }
 
@@ -159,6 +155,114 @@ import UIKit
             self.layoutConfiguration.imagesModels = imageModels
             self.rxCollectionView.reloadData()
         }).disposed(by: disposeBag)
+    }
+
+    private func showAlertControllerWithImage(_ indexPath: IndexPath) {
+        let removeAction = UIAlertAction(title: "Remove Image", style: .default) { _ in
+            self.removeImage(indexPath)
+        }
+        let updateImageAction = UIAlertAction(title: "Update Images", style: .default, handler: loadFromLibrary)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+        let controller = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        controller.addAction(removeAction)
+        controller.addAction(updateImageAction)
+        controller.addAction(cancelAction)
+
+        UIApplication.topViewController()?.present(controller, animated: true)
+    }
+
+    // Actions when there are images on the tapped cell
+    private func removeImage(_ indexPath: IndexPath) {
+        guard indexPath.item <= layoutConfiguration.imagesModels.count - 1 else {
+            return
+        }
+
+        for i in indexPath.item ..< layoutConfiguration.imagesModels.count {
+            layoutConfiguration.imagesModels[i].index = i
+        }
+
+        layoutConfiguration.imagesModels.remove(at: indexPath.item)
+        rxCollectionView.reloadData()
+    }
+
+    private func showAlertControllerWithNoImage() {
+        let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: captureImage)
+        let loadFromLibraryAction = UIAlertAction(title: "Load from library", style: .default, handler: loadFromLibrary)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+        let controller = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        controller.addAction(cameraAction)
+        controller.addAction(loadFromLibraryAction)
+        controller.addAction(cancelAction)
+
+        UIApplication.topViewController()?.present(controller, animated: true)
+    }
+
+    private func captureImage(action _: UIAlertAction) {
+        imagePicker = UIImagePickerController()
+        imagePicker?.delegate = self
+        imagePicker?.sourceType = .camera
+        if let picker = imagePicker {
+            UIApplication.topViewController()?.present(picker, animated: true, completion: nil)
+        }
+    }
+
+    func imagePickerControllerDidCancel(_: UIImagePickerController) {
+        imagePicker?.dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerController(_: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
+        imagePicker?.dismiss(animated: true, completion: nil)
+        if let imageToSave = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            UIImageWriteToSavedPhotosAlbum(imageToSave, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        }
+    }
+
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo _: UnsafeRawPointer) {
+        if let error = error {
+            let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            UIApplication.topViewController()?.present(alert, animated: true)
+        } else {
+            let fetchResult = fetchLatestPhotos(forCount: 1)
+            if fetchResult.count > 0 {
+                let asset = fetchResult.object(at: 0)
+                let imageModel = ImageIndexModel(index: layoutConfiguration.imagesModels.count + 1, image: image, assetIdentifier: asset.localIdentifier)
+                layoutConfiguration.imagesModels.append(imageModel)
+                rxCollectionView.reloadData()
+            }
+        }
+    }
+
+    private func fetchLatestPhotos(forCount count: Int?) -> PHFetchResult<PHAsset> {
+        // Create fetch options.
+        let options = PHFetchOptions()
+
+        // If count limit is specified.
+        if let count = count { options.fetchLimit = count }
+
+        // Add sortDescriptor so the lastest photos will be returned.
+        let sortDescriptor = NSSortDescriptor(key: "creationDate", ascending: false)
+        options.sortDescriptors = [sortDescriptor]
+
+        // Fetch the photos.
+        return PHAsset.fetchAssets(with: .image, options: options)
+    }
+
+    private func loadFromLibrary(action _: UIAlertAction) {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let photoVC = AssetGridViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        subscribeTo(photoVC.modelObservable)
+
+        if hasImages {
+            photoVC.reEntryModelIndexes = getSelectionModels()
+        }
+
+        photoVC.imageCount = numberOfImages
+        let navVC = UINavigationController(rootViewController: photoVC)
+        UIApplication.topViewController()?.present(navVC, animated: true)
     }
 
     private let disposeBag = DisposeBag()

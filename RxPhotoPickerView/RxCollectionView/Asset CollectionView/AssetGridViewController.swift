@@ -38,6 +38,9 @@ class AssetGridViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        collectionView?.backgroundColor = .white
+        collectionView?.register(GridViewCell.self, forCellWithReuseIdentifier: String(describing: GridViewCell.self))
 
         resetCachedAssets()
         PHPhotoLibrary.shared().register(self)
@@ -58,10 +61,17 @@ class AssetGridViewController: UICollectionViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        selectedImagesCount = reEntryModelIndexes.count
+
         let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissView(_:)))
 
         navigationItem.rightBarButtonItem = doneButtonItem
+
         modelIndexes = [SelectionModel](repeating: SelectionModel(), count: fetchResult.count)
+
+        updateSelectedAssets()
+
         updateItemSize()
     }
 
@@ -102,6 +112,22 @@ class AssetGridViewController: UICollectionViewController {
         thumbnailSize = CGSize(width: itemSize.width * scale, height: itemSize.height * scale)
     }
 
+    private func updateSelectedAssets() {
+        for i in 0 ..< fetchResult.count {
+            let asset = fetchResult.object(at: i)
+            if let preselectedModel = reEntryModelIndexes.first(where: { (model) -> Bool in
+                model.representedAssetIdentifier == asset.localIdentifier
+            }) {
+                var model = modelIndexes[i]
+                model.representedAssetIdentifier = preselectedModel.representedAssetIdentifier
+                model.imageIndex = preselectedModel.imageIndex
+                model.image = preselectedModel.image
+                model.isSelected = preselectedModel.isSelected
+                modelIndexes[i] = model
+            }
+        }
+    }
+
     // MARK: UICollectionView
 
     override func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
@@ -118,16 +144,11 @@ class AssetGridViewController: UICollectionViewController {
         }
 
         var model = modelIndexes[indexPath.item]
-        if let preselectedModel = reEntryModelIndexes.first(where: { (model) -> Bool in
-            model.representedAssetIdentifier == asset.localIdentifier
-        }) {
-            model.representedAssetIdentifier = preselectedModel.representedAssetIdentifier
-            model.imageIndex = preselectedModel.imageIndex
-            model.image = preselectedModel.image
-            model.isSelected = preselectedModel.isSelected
-            modelIndexes[indexPath.item] = model
+
+        // Cache will be updated before this check happens
+        if let assetIdentifier = model.representedAssetIdentifier,
+            assetIdentifier == asset.localIdentifier {
             cell.configureCell(model)
-            selectedImagesCount += 1
         } else {
             model.representedAssetIdentifier = asset.localIdentifier
 
@@ -293,5 +314,12 @@ extension AssetGridViewController: PHPhotoLibraryChangeObserver {
             }
             resetCachedAssets()
         }
+    }
+}
+
+extension AssetGridViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_: UICollectionView, layout _: UICollectionViewLayout, sizeForItemAt _: IndexPath) -> CGSize {
+        let widthPerImage = view.frame.size.width / 4
+        return CGSize(width: widthPerImage - 1, height: widthPerImage - 1)
     }
 }

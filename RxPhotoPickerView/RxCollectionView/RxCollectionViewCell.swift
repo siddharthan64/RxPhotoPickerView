@@ -33,7 +33,8 @@ class RxCollectionViewCell: UICollectionViewCell {
 
     func setup() {
         imageView = UIImageView()
-        imageView?.contentMode = .scaleAspectFit
+        imageView?.contentMode = .scaleAspectFill
+        imageView?.clipsToBounds = true
         imageView?.isUserInteractionEnabled = false
 
         if let imageView = imageView {
