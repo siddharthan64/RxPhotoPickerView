@@ -11,7 +11,7 @@ Reactive Photo Picker View Description
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Siddharthan' => 'siddharthan64@gmail.com' }
-  s.source           = { :git => 'https://github.com/siddharthan64/RxPhotoPickerView.git', :tag => 'v0.1.0' }
+  s.source           = { :git => 'https://github.com/siddharthan64/RxPhotoPickerView.git', :tag => 'v0.3.0' }
   s.ios.deployment_target = '11.0'
   s.source_files = 'RxPhotoPickerView/*'
   s.source_files = 'RxPhotoPickerView/RxCollectionView/*'
